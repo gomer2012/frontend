@@ -51,6 +51,96 @@ a {
 .logo__img {
     margin-right: 13px;
 }
+ 
+.header__form {
+    display: flex;
+    align-items: center;
+    margin-left: 37px;
+    height: 39px;
+    width: 403px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0px 3px 3px 0px;
+}
+
+.header__browse {
+    border: 1px solid rgba(230, 230, 230, 1);
+    background-color: rgba(245, 245, 245, 1); 
+    border-radius: 3px 0px 0px 3px;
+    font-size: 14px;
+    position: relative;
+    height: 40px;
+}
+
+.header__search {
+    height: 40px;
+    width: 317px;
+    border: 1px solid rgba(230, 230, 230, 1);
+    border-right-style: none;
+    border-left-style: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search__button {
+    padding: 12px 11px 12px 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(230, 230, 230, 1);
+    border-radius: 0px 3px 3px 0px;
+    outline: none;
+}
+
+summary {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 38px;
+    width: 87px;
+    outline: none;
+  }
+  
+summary::-webkit-details-marker {
+    display: none;
+  }
+   
+summary::after {
+    content: '\25B6';
+    padding-left: 1em;
+  }
+details[open] > summary::after {
+    content: '\25BC';
+  }
+
+.header__browse .drop {
+    display: flex;
+}
+
+.drop {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: 1px solid rgba(236, 236, 236, 1);
+    position: absolute;
+    top: 52px;
+    z-index: 1;
+  }
+  
+  .drop_button {
+    top: 36px;
+  }
+  
+  .drop__flex {
+    width: 234px;
+    margin-right: 46.75px;
+  }
+  
+  .drop__flex:last-of-type {
+    margin-right: 0;
+  }
+  
 
 .menu {
     list-style: none;
@@ -72,8 +162,12 @@ a {
     position: relative;
 }
 
-.menu__list:hover {
+.menu__list:hover .drop {
     display: flex;
+}
+
+.menu__list:hover .drop_last {
+    right: 0;
 }
 
 .drop {
@@ -81,8 +175,8 @@ a {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;
-    display: none;
     top: 48px;
+    display: none;
 }
 
 .drop__h3 {
@@ -671,6 +765,25 @@ cursor: pointer;
     align-items: center;
 }
 
+.link__twitter {
+    margin-top: 25px;
+    margin-left: 8px;
+    width: 32px;
+    height: 32px;
+    background-color: #f16d7f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fab {
+    font-size: 16px;
+    color: #b2b2b2;
+    text-align: right;
+    letter-spacing: 0.03em;
+    line-height: 42px;
+}
+
 .top_block {
     height: 148px;
     background-color: #f8f3f4;
@@ -687,16 +800,84 @@ cursor: pointer;
     text-transform: uppercase;
 }
 
-.breadcrumbs {
+.breadcrumb {
     list-style: none;
     display: flex;
     margin-top: 65px;
 }
 
-.breadcrumbs__list {
+.breadcrumb__link {
     font-size: 14px;
     font-weight: 300;
+    display: block;
     color: #636363;
     line-height: 20px;
     text-transform: uppercase;
+}
+
+.breadcrumb__list:hover {
+    display: flex;
+}
+
+
+.breadcrumb__list {
+    position: relative;
+}
+
+.product_nav {
+    max-width: 243px;
+    margin-top: 59px;
+    float: left;
+  }
+
+.header__category {
+    font-size: 14px;
+    position: relative;
+    height: 37px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ef5b70;
+    line-height: 20px;
+    border-left: 5px solid rgba(241, 109, 127, 1);
+    padding-left: 11px;
+}  
+
+.header__category .drop {
+    display: flex;
+}
+
+.drop__link {
+    font-size: 14px;
+    color: #6f6e6e;
+    line-height: 33px;
+}
+
+.drop__category {
+    background-color: #fff;
+    position: absolute;
+    top: 52px;
+    z-index: 1;
+}
+
+.product_delivery {
+    display: flex;
+    height: 341px;
+    margin-top: 110px;
+    background-color: rgba(34, 34, 36, 1);
+}
+
+.delivery_conditions {
+    background-color: rgba(34, 34, 36, 1);
+    width: 373px;
+    padding-left: 36px;
+    padding-right: 25px;
+}
+
+.product_conditions {
+   margin-top: 89px;
+   text-align: center;
+}
+
+.product_conditions__img {
+    margin-bottom: 32px;
 }
